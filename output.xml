@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.1 on linux)" generated="2025-05-05T11:24:49.767244" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="/workspaces/Phyton---Test/test.robot">
+<test id="s1-t1" name="Test Ladezeit und Seitenelemente" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-05T11:24:49.890273" level="INFO">Opening browser 'Chrome' to base url 'https://de.wikipedia.org/wiki/Wikipedia:Hauptseite'.</msg>
+<msg time="2025-05-05T11:24:50.056611" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2025-05-05T11:24:50.056810" level="FAIL">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5cf981cf77fa &lt;unknown&gt;
+#1 0x5cf98179be90 &lt;unknown&gt;
+#2 0x5cf9817d5cfb &lt;unknown&gt;
+#3 0x5cf9817d1a3f &lt;unknown&gt;
+#4 0x5cf981821c15 &lt;unknown&gt;
+#5 0x5cf981821136 &lt;unknown&gt;
+#6 0x5cf981813013 &lt;unknown&gt;
+#7 0x5cf9817dfb3b &lt;unknown&gt;
+#8 0x5cf9817e07a1 &lt;unknown&gt;
+#9 0x5cf981cbcb9b &lt;unknown&gt;
+#10 0x5cf981cc0a8a &lt;unknown&gt;
+#11 0x5cf981ca4912 &lt;unknown&gt;
+#12 0x5cf981cc1604 &lt;unknown&gt;
+#13 0x5cf981c8974f &lt;unknown&gt;
+#14 0x5cf981ce5678 &lt;unknown&gt;
+#15 0x5cf981ce5856 &lt;unknown&gt;
+#16 0x5cf981cf6666 &lt;unknown&gt;
+#17 0x7a41891ca609 start_thread
+</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2025-05-05T11:24:49.889960" elapsed="0.168488">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5cf981cf77fa &lt;unknown&gt;
+#1 0x5cf98179be90 &lt;unknown&gt;
+#2 0x5cf9817d5cfb &lt;unknown&gt;
+#3 0x5cf9817d1a3f &lt;unknown&gt;
+#4 0x5cf981821c15 &lt;unknown&gt;
+#5 0x5cf981821136 &lt;unknown&gt;
+#6 0x5cf981813013 &lt;unknown&gt;
+#7 0x5cf9817dfb3b &lt;unknown&gt;
+#8 0x5cf9817e07a1 &lt;unknown&gt;
+#9 0x5cf981cbcb9b &lt;unknown&gt;
+#10 0x5cf981cc0a8a &lt;unknown&gt;
+#11 0x5cf981ca4912 &lt;unknown&gt;
+#12 0x5cf981cc1604 &lt;unknown&gt;
+#13 0x5cf981c8974f &lt;unknown&gt;
+#14 0x5cf981ce5678 &lt;unknown&gt;
+#15 0x5cf981ce5856 &lt;unknown&gt;
+#16 0x5cf981cf6666 &lt;unknown&gt;
+#17 0x7a41891ca609 start_thread
+</status>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2025-05-05T11:24:50.058807" elapsed="0.000055"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-05-05T11:24:50.059043" elapsed="0.000031"/>
+</kw>
+<status status="FAIL" start="2025-05-05T11:24:49.888975" elapsed="0.170382">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
+Stacktrace:
+#0 0x5cf981cf77fa &lt;unknown&gt;
+#1 0x5cf98179be90 &lt;unknown&gt;
+#2 0x5cf9817d5cfb &lt;unknown&gt;
+#3 0x5cf9817d1a3f &lt;unknown&gt;
+#4 0x5cf981821c15 &lt;unknown&gt;
+#5 0x5cf981821136 &lt;unknown&gt;
+#6 0x5cf981813013 &lt;unknown&gt;
+#7 0x5cf9817dfb3b &lt;unknown&gt;
+#8 0x5cf9817e07a1 &lt;unknown&gt;
+#9 0x5cf981cbcb9b &lt;unknown&gt;
+#10 0x5cf981cc0a8a &lt;unknown&gt;
+#11 0x5cf981ca4912 &lt;unknown&gt;
+#12 0x5cf981cc1604 &lt;unknown&gt;
+#13 0x5cf981c8974f &lt;unknown&gt;
+#14 0x5cf981ce5678 &lt;unknown&gt;
+#15 0x5cf981ce5856 &lt;unknown&gt;
+#16 0x5cf981cf6666 &lt;unknown&gt;
+#17 0x7a41891ca609 start_thread
+</status>
+</test>
+<status status="FAIL" start="2025-05-05T11:24:49.768219" elapsed="0.291606"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="0" fail="1" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
