@@ -10,13 +10,12 @@ ${PASSWORD}
 
 
 *** Test Cases ***
-Playwright: Open a browser in GUI mode
+Playwright: Open a browser in headless mode
     ${FIRSTNAME}=     Set Variable    First!
     ${USERNAME}=     Set Variable    maria
     ${PASSWORD}=     Set Variable    thoushallnotpass
-    
-    Open Browser        
-    # New Browser    ${BROWSER}    headless=False
+
+    New Browser    ${BROWSER}    headless=True
     New Page    https://robotsparebinindustries.com
     Type Text    input#username    ${USERNAME}
     Type Secret    input#password    $PASSWORD
