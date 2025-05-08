@@ -1,56 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.1 on linux)" generated="2025-05-08T09:21:54.523018" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.12.1 on linux)" generated="2025-05-08T13:14:12.739356" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="/workspaces/Phyton---Test/test.robot">
-<test id="s1-t1" name="Playwright: Open a browser in headless mode" line="13">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-08T09:21:55.110036" level="INFO">${FIRSTNAME} = First!</msg>
-<var>${FIRSTNAME}</var>
-<arg>First!</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-08T09:21:55.109578" elapsed="0.000527"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-08T09:21:55.110897" level="INFO">${USERNAME} = maria</msg>
-<var>${USERNAME}</var>
-<arg>maria</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-08T09:21:55.110598" elapsed="0.000350"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-05-08T09:21:55.111657" level="INFO">${PASSWORD} = thoushallnotpass</msg>
-<var>${PASSWORD}</var>
-<arg>thoushallnotpass</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-05-08T09:21:55.111240" elapsed="0.000463"/>
-</kw>
+<test id="s1-t1" name="Playwright: Open a browser in headless mode" line="17">
 <kw name="New Browser" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T09:21:55.113045" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/workspaces/Phyton---Test/browser/traces/temp/ec9c15ab-0709-4465-a064-9f000a3c2af6"}</msg>
-<msg time="2025-05-08T09:21:55.118979" level="INFO">Starting Browser process /usr/local/python/3.12.1/lib/python3.12/site-packages/Browser/wrapper/index.js using at 127.0.0.1:52027</msg>
-<msg time="2025-05-08T09:21:56.015830" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/workspaces/Phyton---Test/browser/traces/temp/ec9c15ab-0709-4465-a064-9f000a3c2af6"}</msg>
+<msg time="2025-05-08T13:14:13.237451" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/workspaces/Phyton---Test/browser/traces/temp/8c5411a3-f634-413e-aa84-ca86ed582fe9"}</msg>
+<msg time="2025-05-08T13:14:13.242420" level="INFO">Starting Browser process /usr/local/python/3.12.1/lib/python3.12/site-packages/Browser/wrapper/index.js using at 127.0.0.1:53701</msg>
+<msg time="2025-05-08T13:14:13.876120" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/workspaces/Phyton---Test/browser/traces/temp/8c5411a3-f634-413e-aa84-ca86ed582fe9"}</msg>
 <arg>${BROWSER}</arg>
-<arg>headless=False</arg>
+<arg>headless=True</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-05-08T09:21:55.111978" elapsed="0.905980"/>
+<status status="PASS" start="2025-05-08T13:14:13.236266" elapsed="0.640129"/>
 </kw>
 <kw name="New Page" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T09:21:56.605965" level="INFO">Successfully initialized new page object and opened url: https://robotsparebinindustries.com</msg>
-<msg time="2025-05-08T09:21:56.606083" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<arg>https://robotsparebinindustries.com</arg>
+<msg time="2025-05-08T13:14:14.161180" level="INFO">Successfully initialized new page object and opened url: https://robotsparebinindustries.com</msg>
+<msg time="2025-05-08T13:14:14.161305" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-05-08T09:21:56.020444" elapsed="0.585842"/>
+<status status="PASS" start="2025-05-08T13:14:13.876976" elapsed="0.284526"/>
 </kw>
 <kw name="Type Text" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T09:21:56.607426" level="INFO">Types the text 'maria' in the given field.</msg>
+<msg time="2025-05-08T13:14:14.165244" level="INFO">Types the text 'maria' in the given field.</msg>
 <arg>input#username</arg>
 <arg>${USERNAME}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-05-08T09:21:56.606647" elapsed="0.143231"/>
+<status status="PASS" start="2025-05-08T13:14:14.162744" elapsed="0.146097"/>
 </kw>
 <kw name="Type Secret" owner="RPA.Browser.Playwright">
 <arg>input#password</arg>
@@ -59,31 +38,85 @@
 <tag>Setter</tag>
 <doc>Types the given secret from ``variable_name`` into the text field
 found by ``selector``.</doc>
-<status status="PASS" start="2025-05-08T09:21:56.750252" elapsed="0.090166"/>
+<status status="PASS" start="2025-05-08T13:14:14.309579" elapsed="0.046778"/>
 </kw>
 <kw name="Click" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T09:21:56.844068" level="INFO">Clicks the element 'button.btn-primary'.</msg>
+<msg time="2025-05-08T13:14:14.358155" level="INFO">Clicks the element 'button.btn-primary'.</msg>
 <arg>button.btn-primary</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-05-08T09:21:56.843423" elapsed="0.075899"/>
+<status status="PASS" start="2025-05-08T13:14:14.357362" elapsed="0.048783"/>
 </kw>
 <kw name="Type Text" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T09:21:56.921001" level="INFO">Types the text 'First!' in the given field.</msg>
+<msg time="2025-05-08T13:14:14.407049" level="INFO">Types the text 'First!' in the given field.</msg>
 <arg>input#firstname</arg>
 <arg>${FIRSTNAME}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-05-08T09:21:56.920066" elapsed="2.357848"/>
+<status status="PASS" start="2025-05-08T13:14:14.406501" elapsed="0.809810"/>
 </kw>
-<msg time="2025-05-08T09:21:59.296598" level="INFO">Switching context to context=1b368d1e-90f8-4d62-ab7f-a89aaa3bccc7 in CURRENT</msg>
-<msg time="2025-05-08T09:21:59.305526" level="INFO">Successfully changed active context: context=1b368d1e-90f8-4d62-ab7f-a89aaa3bccc7</msg>
-<msg time="2025-05-08T09:21:59.333592" level="INFO">Successfully closed Context</msg>
-<status status="PASS" start="2025-05-08T09:21:55.104011" elapsed="4.174307"/>
+<kw name="Type Text" owner="RPA.Browser.Playwright">
+<msg time="2025-05-08T13:14:15.217422" level="INFO">Types the text 'Last!' in the given field.</msg>
+<arg>input#lastname</arg>
+<arg>${LASTNAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-08T13:14:15.216690" elapsed="0.022678"/>
+</kw>
+<kw name="Type Text" owner="RPA.Browser.Playwright">
+<msg time="2025-05-08T13:14:15.240463" level="INFO">Types the text '1000' in the given field.</msg>
+<arg>input#salesresult</arg>
+<arg>${SALESRESULT}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-08T13:14:15.239729" elapsed="0.023036"/>
+</kw>
+<kw name="Click" owner="RPA.Browser.Playwright">
+<msg time="2025-05-08T13:14:15.264198" level="INFO">Clicks the element 'button.btn-primary'.</msg>
+<arg>button.btn-primary</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-08T13:14:15.263182" elapsed="0.107294"/>
+</kw>
+<kw name="Click" owner="RPA.Browser.Playwright">
+<msg time="2025-05-08T13:14:15.371761" level="INFO">Clicks the element 'button.btn.btn-info.btn-secondary'.</msg>
+<arg>button.btn.btn-info.btn-secondary</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-08T13:14:15.371070" elapsed="0.075655"/>
+</kw>
+<kw name="Get Text" owner="RPA.Browser.Playwright">
+<msg time="2025-05-08T13:14:15.477262" level="INFO">Text: 'The boss wants to see you...'</msg>
+<msg time="2025-05-08T13:14:15.477502" level="INFO">${RESULT} = The boss wants to see you...</msg>
+<var>${RESULT}</var>
+<arg>span.performance</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-08T13:14:15.447067" elapsed="0.030488"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${RESULT}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-05-08T13:14:15.477906" elapsed="0.000355"/>
+</kw>
+<kw name="Close Browser" owner="RPA.Browser.Playwright">
+<msg time="2025-05-08T13:14:15.519384" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-08T13:14:15.478464" elapsed="0.041154"/>
+</kw>
+<status status="PASS" start="2025-05-08T13:14:13.234602" elapsed="2.285683"/>
 </test>
-<status status="PASS" start="2025-05-08T09:21:54.524470" elapsed="4.809887"/>
+<status status="PASS" start="2025-05-08T13:14:12.740431" elapsed="2.790548"/>
 </suite>
 <statistics>
 <total>
