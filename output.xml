@@ -1,88 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.1 on linux)" generated="2025-05-05T11:24:49.767244" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.12.1 on linux)" generated="2025-05-08T08:31:02.002112" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="/workspaces/Phyton---Test/test.robot">
-<test id="s1-t1" name="Test Ladezeit und Seitenelemente" line="9">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-05-05T11:24:49.890273" level="INFO">Opening browser 'Chrome' to base url 'https://de.wikipedia.org/wiki/Wikipedia:Hauptseite'.</msg>
-<msg time="2025-05-05T11:24:50.056611" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg time="2025-05-05T11:24:50.056810" level="FAIL">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
-Stacktrace:
-#0 0x5cf981cf77fa &lt;unknown&gt;
-#1 0x5cf98179be90 &lt;unknown&gt;
-#2 0x5cf9817d5cfb &lt;unknown&gt;
-#3 0x5cf9817d1a3f &lt;unknown&gt;
-#4 0x5cf981821c15 &lt;unknown&gt;
-#5 0x5cf981821136 &lt;unknown&gt;
-#6 0x5cf981813013 &lt;unknown&gt;
-#7 0x5cf9817dfb3b &lt;unknown&gt;
-#8 0x5cf9817e07a1 &lt;unknown&gt;
-#9 0x5cf981cbcb9b &lt;unknown&gt;
-#10 0x5cf981cc0a8a &lt;unknown&gt;
-#11 0x5cf981ca4912 &lt;unknown&gt;
-#12 0x5cf981cc1604 &lt;unknown&gt;
-#13 0x5cf981c8974f &lt;unknown&gt;
-#14 0x5cf981ce5678 &lt;unknown&gt;
-#15 0x5cf981ce5856 &lt;unknown&gt;
-#16 0x5cf981cf6666 &lt;unknown&gt;
-#17 0x7a41891ca609 start_thread
+<test id="s1-t1" name="Playwright: Open a browser in GUI mode" line="13">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-08T08:31:02.466636" level="INFO">${FIRSTNAME} = First!</msg>
+<var>${FIRSTNAME}</var>
+<arg>First!</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-08T08:31:02.466208" elapsed="0.000482"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-08T08:31:02.467126" level="INFO">${USERNAME} = maria</msg>
+<var>${USERNAME}</var>
+<arg>maria</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-08T08:31:02.466926" elapsed="0.000230"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-05-08T08:31:02.467614" level="INFO">${PASSWORD} = thoushallnotpass</msg>
+<var>${PASSWORD}</var>
+<arg>thoushallnotpass</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-05-08T08:31:02.467327" elapsed="0.000319"/>
+</kw>
+<kw name="Open Browser" owner="RPA.Browser.Playwright">
+<msg time="2025-05-08T08:31:02.468277" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
+<msg time="2025-05-08T08:31:02.468617" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/workspaces/Phyton---Test/browser/traces/temp/5b00ab6b-97c4-4b6d-938c-61e862f7d3b2"}</msg>
+<msg time="2025-05-08T08:31:02.472881" level="INFO">Starting Browser process /usr/local/python/3.12.1/lib/python3.12/site-packages/Browser/wrapper/index.js using at 127.0.0.1:60541</msg>
+<msg time="2025-05-08T08:31:03.095898" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
+Error: Tried to take screenshot, but no page was open.</msg>
+<msg time="2025-05-08T08:31:03.095988" level="INFO">See also file:///workspaces/Phyton---Test/playwright-log.txt for additional details.</msg>
+<msg time="2025-05-08T08:31:03.096376" level="FAIL">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /usr/local/python/3.12.1/lib/python3.12/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1169/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AutoExpandDetailsElement,AvoidUnnecessaryBeforeUnloadCheckSync,CertificateTransparencyComponentUpdater,DeferRendererTasksAfterInput,DestroyProfileOnBrowserClose,DialMediaRouteProvider,ExtensionManifestV2Disabled,GlobalMediaControls,HttpsUpgrades,ImprovedCookieControls,LazyFrameLoading,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-aCvw69 --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=19240
+  - [pid=19240][err] [19240:19255:0508/083103.071495:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+  - [pid=19240][err] [19240:19240:0508/083103.072961:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:249] Missing X server or $DISPLAY
+  - [pid=19240][err] [19240:19240:0508/083103.072974:ERROR:ui/aura/env.cc:257] The platform failed to initialize.  Exiting.
 </msg>
-<arg>${URL}</arg>
 <arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="FAIL" start="2025-05-05T11:24:49.889960" elapsed="0.168488">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
-Stacktrace:
-#0 0x5cf981cf77fa &lt;unknown&gt;
-#1 0x5cf98179be90 &lt;unknown&gt;
-#2 0x5cf9817d5cfb &lt;unknown&gt;
-#3 0x5cf9817d1a3f &lt;unknown&gt;
-#4 0x5cf981821c15 &lt;unknown&gt;
-#5 0x5cf981821136 &lt;unknown&gt;
-#6 0x5cf981813013 &lt;unknown&gt;
-#7 0x5cf9817dfb3b &lt;unknown&gt;
-#8 0x5cf9817e07a1 &lt;unknown&gt;
-#9 0x5cf981cbcb9b &lt;unknown&gt;
-#10 0x5cf981cc0a8a &lt;unknown&gt;
-#11 0x5cf981ca4912 &lt;unknown&gt;
-#12 0x5cf981cc1604 &lt;unknown&gt;
-#13 0x5cf981c8974f &lt;unknown&gt;
-#14 0x5cf981ce5678 &lt;unknown&gt;
-#15 0x5cf981ce5856 &lt;unknown&gt;
-#16 0x5cf981cf6666 &lt;unknown&gt;
-#17 0x7a41891ca609 start_thread
-</status>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Opens a new browser instance. Use this keyword for quick experiments or debugging sessions.</doc>
+<status status="FAIL" start="2025-05-08T08:31:02.467813" elapsed="0.631642">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /usr/local/python/3.12.1/lib/python3.12/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1169/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --di...
+    [ Message content over the limit has been removed. ]
+...--disable-features=AcceptCHFrame,AutoExpandDetailsElement,AvoidUnnecessaryBeforeUnloadCheckSync,CertificateTransparencyComponentUpdater,DeferRendererTasksAfterInput,DestroyProfileOnBrowserClose,DialMediaRouteProvider,ExtensionManifestV2Disabled,GlobalMediaControls,HttpsUpgrades,ImprovedCookieControls,LazyFrameLoading,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-aCvw69 --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=19240
+  - [pid=19240][err] [19240:19255:0508/083103.071495:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+  - [pid=19240][err] [19240:19240:0508/083103.072961:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:249] Missing X server or $DISPLAY
+  - [pid=19240][err] [19240:19240:0508/083103.072974:ERROR:ui/aura/env.cc:257] The platform failed to initialize.  Exiting.</status>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>3s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2025-05-05T11:24:50.058807" elapsed="0.000055"/>
+<kw name="New Page" owner="RPA.Browser.Playwright">
+<arg>https://robotsparebinindustries.com</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="NOT RUN" start="2025-05-08T08:31:03.099881" elapsed="0.000098"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="NOT RUN" start="2025-05-05T11:24:50.059043" elapsed="0.000031"/>
+<kw name="Type Text" owner="RPA.Browser.Playwright">
+<arg>input#username</arg>
+<arg>${USERNAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-05-08T08:31:03.100162" elapsed="0.000063"/>
 </kw>
-<status status="FAIL" start="2025-05-05T11:24:49.888975" elapsed="0.170382">SessionNotCreatedException: Message: session not created: probably user data directory is already in use, please specify a unique value for --user-data-dir argument, or don't use --user-data-dir
-Stacktrace:
-#0 0x5cf981cf77fa &lt;unknown&gt;
-#1 0x5cf98179be90 &lt;unknown&gt;
-#2 0x5cf9817d5cfb &lt;unknown&gt;
-#3 0x5cf9817d1a3f &lt;unknown&gt;
-#4 0x5cf981821c15 &lt;unknown&gt;
-#5 0x5cf981821136 &lt;unknown&gt;
-#6 0x5cf981813013 &lt;unknown&gt;
-#7 0x5cf9817dfb3b &lt;unknown&gt;
-#8 0x5cf9817e07a1 &lt;unknown&gt;
-#9 0x5cf981cbcb9b &lt;unknown&gt;
-#10 0x5cf981cc0a8a &lt;unknown&gt;
-#11 0x5cf981ca4912 &lt;unknown&gt;
-#12 0x5cf981cc1604 &lt;unknown&gt;
-#13 0x5cf981c8974f &lt;unknown&gt;
-#14 0x5cf981ce5678 &lt;unknown&gt;
-#15 0x5cf981ce5856 &lt;unknown&gt;
-#16 0x5cf981cf6666 &lt;unknown&gt;
-#17 0x7a41891ca609 start_thread
-</status>
+<kw name="Type Secret" owner="RPA.Browser.Playwright">
+<arg>input#password</arg>
+<arg>$PASSWORD</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given secret from ``variable_name`` into the text field
+found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-05-08T08:31:03.100382" elapsed="0.000055"/>
+</kw>
+<kw name="Click" owner="RPA.Browser.Playwright">
+<arg>button.btn-primary</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-05-08T08:31:03.100604" elapsed="0.000058"/>
+</kw>
+<kw name="Type Text" owner="RPA.Browser.Playwright">
+<arg>input#firstname</arg>
+<arg>${FIRSTNAME}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="NOT RUN" start="2025-05-08T08:31:03.100806" elapsed="0.000053"/>
+</kw>
+<status status="FAIL" start="2025-05-08T08:31:02.464652" elapsed="0.636440">Error: browserType.launch: Target page, context or browser has been closed
+Browser logs:
+
+╔════════════════════════════════════════════════════════════════════════════════════════════════╗
+║ Looks like you launched a headed browser without having a XServer running.                     ║
+║ Set either 'headless: true' or use 'xvfb-run &lt;your-playwright-app&gt;' before running Playwright. ║
+║                                                                                                ║
+║ &lt;3 Playwright Team                                                                             ║
+╚════════════════════════════════════════════════════════════════════════════════════════════════╝
+Call log:
+  - &lt;launching&gt; /usr/local/python/3.12.1/lib/python3.12/site-packages/Browser/wrapper/node_modules/playwright-core/.local-browsers/chromium-1169/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --di...
+    [ Message content over the limit has been removed. ]
+...--disable-features=AcceptCHFrame,AutoExpandDetailsElement,AvoidUnnecessaryBeforeUnloadCheckSync,CertificateTransparencyComponentUpdater,DeferRendererTasksAfterInput,DestroyProfileOnBrowserClose,DialMediaRouteProvider,ExtensionManifestV2Disabled,GlobalMediaControls,HttpsUpgrades,ImprovedCookieControls,LazyFrameLoading,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --enable-automation --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --no-sandbox --user-data-dir=/tmp/playwright_chromiumdev_profile-aCvw69 --remote-debugging-pipe --no-startup-window
+  - &lt;launched&gt; pid=19240
+  - [pid=19240][err] [19240:19255:0508/083103.071495:ERROR:dbus/bus.cc:408] Failed to connect to the bus: Failed to connect to socket /var/run/dbus/system_bus_socket: No such file or directory
+  - [pid=19240][err] [19240:19240:0508/083103.072961:ERROR:ui/ozone/platform/x11/ozone_platform_x11.cc:249] Missing X server or $DISPLAY
+  - [pid=19240][err] [19240:19240:0508/083103.072974:ERROR:ui/aura/env.cc:257] The platform failed to initialize.  Exiting.</status>
 </test>
-<status status="FAIL" start="2025-05-05T11:24:49.768219" elapsed="0.291606"/>
+<status status="FAIL" start="2025-05-08T08:31:02.003039" elapsed="1.104658"/>
 </suite>
 <statistics>
 <total>
@@ -95,5 +138,6 @@ Stacktrace:
 </suite>
 </statistics>
 <errors>
+<msg time="2025-05-08T08:31:02.468277" level="WARN">Open Browser is for quick experimentation and debugging only. Use New Page for production.</msg>
 </errors>
 </robot>
