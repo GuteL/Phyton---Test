@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.1 on linux)" generated="2025-05-08T13:14:12.739356" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.12.1 on linux)" generated="2025-05-16T05:25:24.016254" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="/workspaces/Phyton---Test/test.robot">
-<test id="s1-t1" name="Playwright: Open a browser in headless mode" line="17">
+<test id="s1-t1" name="Playwright: Open a browser in headless mode" line="19">
 <kw name="New Browser" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T13:14:13.237451" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/workspaces/Phyton---Test/browser/traces/temp/8c5411a3-f634-413e-aa84-ca86ed582fe9"}</msg>
-<msg time="2025-05-08T13:14:13.242420" level="INFO">Starting Browser process /usr/local/python/3.12.1/lib/python3.12/site-packages/Browser/wrapper/index.js using at 127.0.0.1:53701</msg>
-<msg time="2025-05-08T13:14:13.876120" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/workspaces/Phyton---Test/browser/traces/temp/8c5411a3-f634-413e-aa84-ca86ed582fe9"}</msg>
+<msg time="2025-05-16T05:25:24.908861" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/workspaces/Phyton---Test/browser/traces/temp/4e87c236-c441-4421-91f4-c9267566e66b"}</msg>
+<msg time="2025-05-16T05:25:24.916701" level="INFO">Starting Browser process /home/codespace/.python/current/lib/python3.12/site-packages/Browser/wrapper/index.js using at 127.0.0.1:55151</msg>
+<msg time="2025-05-16T05:25:25.615214" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/workspaces/Phyton---Test/browser/traces/temp/4e87c236-c441-4421-91f4-c9267566e66b"}</msg>
 <arg>${BROWSER}</arg>
 <arg>headless=True</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2025-05-08T13:14:13.236266" elapsed="0.640129"/>
+<status status="PASS" start="2025-05-16T05:25:24.906682" elapsed="0.709338"/>
 </kw>
 <kw name="New Page" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T13:14:14.161180" level="INFO">Successfully initialized new page object and opened url: https://robotsparebinindustries.com</msg>
-<msg time="2025-05-08T13:14:14.161305" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<msg time="2025-05-16T05:25:25.871905" level="INFO">Successfully initialized new page object and opened url: https://robotsparebinindustries.com</msg>
+<msg time="2025-05-16T05:25:25.872280" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
 <arg>${URL}</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2025-05-08T13:14:13.876976" elapsed="0.284526"/>
+<status status="PASS" start="2025-05-16T05:25:25.617058" elapsed="0.255644"/>
 </kw>
 <kw name="Type Text" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T13:14:14.165244" level="INFO">Types the text 'maria' in the given field.</msg>
+<msg time="2025-05-16T05:25:25.877816" level="INFO">Types the text 'maria' in the given field.</msg>
 <arg>input#username</arg>
 <arg>${USERNAME}</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-05-08T13:14:14.162744" elapsed="0.146097"/>
+<status status="PASS" start="2025-05-16T05:25:25.875970" elapsed="0.149931"/>
 </kw>
 <kw name="Type Secret" owner="RPA.Browser.Playwright">
 <arg>input#password</arg>
@@ -38,85 +38,96 @@
 <tag>Setter</tag>
 <doc>Types the given secret from ``variable_name`` into the text field
 found by ``selector``.</doc>
-<status status="PASS" start="2025-05-08T13:14:14.309579" elapsed="0.046778"/>
+<status status="PASS" start="2025-05-16T05:25:26.026595" elapsed="0.064463"/>
 </kw>
 <kw name="Click" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T13:14:14.358155" level="INFO">Clicks the element 'button.btn-primary'.</msg>
+<msg time="2025-05-16T05:25:26.092863" level="INFO">Clicks the element 'button.btn-primary'.</msg>
 <arg>button.btn-primary</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-05-08T13:14:14.357362" elapsed="0.048783"/>
-</kw>
-<kw name="Type Text" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T13:14:14.407049" level="INFO">Types the text 'First!' in the given field.</msg>
-<arg>input#firstname</arg>
-<arg>${FIRSTNAME}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-05-08T13:14:14.406501" elapsed="0.809810"/>
-</kw>
-<kw name="Type Text" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T13:14:15.217422" level="INFO">Types the text 'Last!' in the given field.</msg>
-<arg>input#lastname</arg>
-<arg>${LASTNAME}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-05-08T13:14:15.216690" elapsed="0.022678"/>
-</kw>
-<kw name="Type Text" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T13:14:15.240463" level="INFO">Types the text '1000' in the given field.</msg>
-<arg>input#salesresult</arg>
-<arg>${SALESRESULT}</arg>
-<tag>PageContent</tag>
-<tag>Setter</tag>
-<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
-<status status="PASS" start="2025-05-08T13:14:15.239729" elapsed="0.023036"/>
+<status status="PASS" start="2025-05-16T05:25:26.092182" elapsed="0.056219"/>
 </kw>
 <kw name="Click" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T13:14:15.264198" level="INFO">Clicks the element 'button.btn-primary'.</msg>
-<arg>button.btn-primary</arg>
+<msg time="2025-05-16T05:25:26.149799" level="INFO">Clicks the element 'text="Order your robot!"'.</msg>
+<arg>text="Order your robot!"</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-05-08T13:14:15.263182" elapsed="0.107294"/>
+<status status="PASS" start="2025-05-16T05:25:26.149062" elapsed="0.059752"/>
 </kw>
 <kw name="Click" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T13:14:15.371761" level="INFO">Clicks the element 'button.btn.btn-info.btn-secondary'.</msg>
-<arg>button.btn.btn-info.btn-secondary</arg>
+<msg time="2025-05-16T05:25:26.210644" level="INFO">Clicks the element 'button.btn.btn-dark'.</msg>
+<arg>button.btn.btn-dark</arg>
 <tag>PageContent</tag>
 <tag>Setter</tag>
 <doc>Simulates mouse click on the element found by ``selector``.</doc>
-<status status="PASS" start="2025-05-08T13:14:15.371070" elapsed="0.075655"/>
+<status status="PASS" start="2025-05-16T05:25:26.209625" elapsed="0.043465"/>
 </kw>
-<kw name="Get Text" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T13:14:15.477262" level="INFO">Text: 'The boss wants to see you...'</msg>
-<msg time="2025-05-08T13:14:15.477502" level="INFO">${RESULT} = The boss wants to see you...</msg>
-<var>${RESULT}</var>
-<arg>span.performance</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
+<kw name="Click" owner="RPA.Browser.Playwright">
+<msg time="2025-05-16T05:25:26.255325" level="INFO">Clicks the element 'css=select#head.custom-select'.</msg>
+<arg>css=select#head.custom-select</arg>
 <tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2025-05-08T13:14:15.447067" elapsed="0.030488"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${RESULT}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2025-05-08T13:14:15.477906" elapsed="0.000355"/>
-</kw>
-<kw name="Close Browser" owner="RPA.Browser.Playwright">
-<msg time="2025-05-08T13:14:15.519384" level="INFO">Closed browser</msg>
-<tag>BrowserControl</tag>
 <tag>Setter</tag>
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2025-05-08T13:14:15.478464" elapsed="0.041154"/>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-16T05:25:26.254248" elapsed="0.058025"/>
 </kw>
-<status status="PASS" start="2025-05-08T13:14:13.234602" elapsed="2.285683"/>
+<kw name="Select Options By" owner="RPA.Browser.Playwright">
+<msg time="2025-05-16T05:25:26.314197" level="INFO">Selects the option(s) 1 by attribute SelectAttribute.value from element css=select#head.custom-select.</msg>
+<arg>css=select#head.custom-select</arg>
+<arg>value</arg>
+<arg>1</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Selects options from select element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-16T05:25:26.312933" elapsed="0.042585"/>
+</kw>
+<kw name="Click" owner="RPA.Browser.Playwright">
+<msg time="2025-05-16T05:25:26.356958" level="INFO">Clicks the element 'input#id-body-4.form-check-input'.</msg>
+<arg>input#id-body-4.form-check-input</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-16T05:25:26.356244" elapsed="0.058762"/>
+</kw>
+<kw name="Type Text" owner="RPA.Browser.Playwright">
+<msg time="2025-05-16T05:25:26.416516" level="INFO">Types the text '2' in the given field.</msg>
+<arg>css=input.form-control[placeholder="Enter the part number for the legs"]</arg>
+<arg>2</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-16T05:25:26.415619" elapsed="0.025864"/>
+</kw>
+<kw name="Type Text" owner="RPA.Browser.Playwright">
+<msg time="2025-05-16T05:25:26.443063" level="INFO">Types the text 'beispielstrasse 1' in the given field.</msg>
+<arg>css=input.form-control[placeholder="Shipping address"]</arg>
+<arg>beispielstrasse 1</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-05-16T05:25:26.442086" elapsed="0.055797"/>
+</kw>
+<kw name="Click" owner="RPA.Browser.Playwright">
+<msg time="2025-05-16T05:25:26.499867" level="INFO">Clicks the element 'button#order.btn.btn-primary'.</msg>
+<arg>button#order.btn.btn-primary</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-05-16T05:25:26.498817" elapsed="0.399633"/>
+</kw>
+<kw name="Take Screenshot" owner="RPA.Browser.Playwright">
+<msg time="2025-05-16T05:25:27.008718" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-05-16T05:25:26.899173" elapsed="0.109908"/>
+</kw>
+<msg time="2025-05-16T05:25:27.025414" level="INFO">Switching context to context=5f3ed0ba-ff9d-4f6c-a9e5-20683b5ae3e8 in CURRENT</msg>
+<msg time="2025-05-16T05:25:27.038178" level="INFO">Successfully changed active context: context=5f3ed0ba-ff9d-4f6c-a9e5-20683b5ae3e8</msg>
+<msg time="2025-05-16T05:25:27.070043" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-05-16T05:25:24.904360" elapsed="2.105120"/>
 </test>
-<status status="PASS" start="2025-05-08T13:14:12.740431" elapsed="2.790548"/>
+<status status="PASS" start="2025-05-16T05:25:24.020184" elapsed="3.050985"/>
 </suite>
 <statistics>
 <total>
