@@ -1,4 +1,4 @@
-ProduktID,Produktname,Kategorie,Preis,Lagerbestand
+ProduktID_neu,Produktname,Kategorie,Preis,Lagerbestand
 101,Smartphone,Elektronik,599.99,25
 102,Laptop,Elektronik,899.99,15
 103,Kaffeemaschine,Haushalt,129.99,40
